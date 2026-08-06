@@ -1,0 +1,229 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #161c28;
+}
+ul{
+    list-style: none;
+}
+.container{
+    max-width: 1600px;
+    padding: 0 15px;
+    margin: 0 0;
+}
+h1,.subtitle{
+    margin: 10px auto;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 10;
+    text-transform: uppercase;
+}
+.subtitle{
+    padding: 150px 10px 0px 10px;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+h1{
+    padding:0px 10px 15px 10px;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+.line{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.line li button{
+    margin: 10px 30px;
+}
+/*-----------------------------------------| button Signup |---------------------------------------------*/
+.line li > .btn-signup{
+    position: relative;
+    width: 160px;
+    height: 58px;
+    border: 1px solid white;
+    border-radius: 50px;
+    background-color: #0f0f0f; 
+    color: white;
+    font-size: 16px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.35s;
+}
+.line li > .btn-signup  span{
+    position: absolute;
+}
+.line li > .btn-signup  span:first-child{
+    top: -50%;
+    left: 35%;
+    transform: translate(-50% ,-50%);
+    transition: 0.3s;
+}
+.line li > .btn-signup  span:nth-child(2){
+    top: -70%;
+    left: 40%;
+    transform: translate(-50% ,-50%);
+    transition: 0.4s;
+}
+.line li > .btn-signup  span:nth-child(3){
+    top: -100%;
+    left: 45%;
+    transform: translate(-50% ,-50%);
+    transition: 0.5s;
+}
+.line li > .btn-signup  span:nth-child(4){
+    top: -130%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    transition: 0.6s;
+}
+.line li > .btn-signup  span:nth-child(5){
+    top: -160%;
+    left: 55%;
+    transform: translate(-50% ,-50%);
+    transition: 0.7s;
+}
+.line li > .btn-signup  span:last-child{
+    top: -190%;
+    left: 60%;
+    transform: translate(-50% ,-50%);
+    transition: 0.8s;
+}
+.line li > .btn-signup::before{
+    content: 'signup';
+    /* margin: 50px auto; */
+    padding: 20px 0;
+    width: 160px;
+    height: 58px;
+    border: 1px solid white;
+    border-radius: 50px;
+    background-color: white;
+    color: #0f0f0f;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.35s;
+}
+.line li > .btn-signup:hover::before{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , 150%);
+}
+.line li > .btn-signup:hover  span:first-child{
+    top: 50%;
+    left: 35%;
+    transform: translate(-50% ,-50%);
+}
+.line li > .btn-signup:hover  span:nth-child(2){
+    top: 50%;
+    left: 40%;
+    transform: translate(-30% ,-50%);
+}
+.line li > .btn-signup:hover  span:nth-child(3){
+    top: 50%;
+    left: 46%;
+    transform: translate(-50% ,-50%);
+}
+.line li > .btn-signup:hover  span:nth-child(4){
+    top: 50%;
+    left: 54%;
+    transform: translate(-50% ,-50%);
+}
+.line li > .btn-signup:hover  span:nth-child(5){
+    top: 50%;
+    left: 62%;
+    transform: translate(-50% ,-50%);
+}
+.line li > .btn-signup:hover  span:last-child{
+    top: 50%;
+    left: 69%;
+    transform: translate(-50% ,-50%);
+}
+/*-----------------------------------------| button Submit |---------------------------------------------*/
+.line li > .btn-submit{
+    position: relative;
+    width: 170px;
+    height: 58px;
+    border:2px solid #2563eb59;
+    border-radius: 40px;
+    background-color: #111827; 
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    overflow: hidden;
+    transition: 0.35s;
+}
+.line li > .btn-submit  span{
+    position: relative;
+    z-index: 2;
+}
+.line li > .btn-submit:hover{
+    background-color: #0f0f0f;
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.35);
+}
+/*-----------------------------------------| button Next |---------------------------------------------*/
+.line li > .btn-next{
+    position: relative;
+    width: 170px;
+    height: 58px;
+    border: none;
+    border-radius: 40px;
+    background-color: #0f0f0f; 
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    overflow: hidden;
+    transition: 0.35s;
+}
+.line li > .btn-next  span{
+    position: relative;
+    z-index: 2;
+}
+.line li > .btn-next::before{
+    content: '';
+    position: absolute;
+    border-radius: 16px;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #00d0ff;
+    transition: 0.45s ease;
+}
+.line li > .btn-next:hover::before{
+    left: 0;
+}
+.line li > .btn-next:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px #2563eb59;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
