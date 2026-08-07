@@ -506,7 +506,7 @@ h1{
 }
 /*-----------------------------------------| button Get Started |---------------------------------------------*/
 .line li > .btn-get-started{
-    position: relative;
+    position: absolute;
     width: 160px;
     height: 58px;
     border: none;
