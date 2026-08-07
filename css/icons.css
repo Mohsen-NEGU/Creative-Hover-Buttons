@@ -24,7 +24,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-paper-plane:before {
+  content: "\e905";
+}
+.icon-send1:before {
+  content: "\e905";
+}
+.icon-send:before {
+  content: "\e906";
+}
 .icon-download1:before {
   content: "\e96f";
 }

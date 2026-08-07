@@ -384,7 +384,126 @@ h1{
     opacity: 1;
 }
 /*-----------------------------------------| button Send |---------------------------------------------*/
-
+.line li > .btn-send{
+    position: relative;
+    width: 160px;
+    height: 58px;
+    border: none;
+    border-radius: 50px;
+    background-color: white; 
+    color: #0f0f0f;
+    font-size: 18px;
+    font-weight: 600;
+    /* overflow: hidden; */
+    transition: 0.35s;
+}
+.line li > .btn-send > i.letter{
+    transform-origin: center;
+    position: absolute;
+    top: 45%;
+    left: 25%;
+    transform:translate(-25% , -45%) rotate(-45deg);
+    transform-origin: center;
+    transition: 0.35s ease-in-out;
+}
+.line li > .btn-send > i.checked{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-15%,-50%);
+    font-size: 25px;
+    font-weight: 100;
+    opacity: 0;
+    transition-delay: 1.5s;
+}
+.line li > .btn-send span.sent-s{
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    transform: translate(-40%,0%);
+    transition: 0.2s;
+    transition-delay: 1s;
+}
+.line li > .btn-send span.sent-e{
+    position: absolute;
+    top: -100%;
+    left: 47%;
+    transition: 0.6s;
+    transition-delay: 1s;
+    transform: translate(-40%,0);
+}
+.line li > .btn-send span.sent-n{
+    position: absolute;
+    top: 100%;
+    left: 54%;
+    transition: 0.2s;
+    transition-delay: 1s;
+    transform: translate(-40%,0%);
+}
+.line li > .btn-send span.sent-t{
+    position: absolute;
+    top: -40%;
+    left: 61%;
+    transition: 0.2s;
+    transition-delay: 1s;
+    transform: translate(-40%,0%);
+}
+.line li > .btn-send span.send{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 60%;
+    transform: translate(-60% , -50%);
+    transition: 0.5s 0.5s ease-in;
+}
+.line li > .btn-send:hover span.send{
+    width: 0;
+    opacity: 0;
+    letter-spacing: 10px;
+}
+.line li > .btn-send:hover i.letter{
+    top: 45%;
+    left: 25%;
+    transform:translate(-25% , -45%) rotate(1deg);
+    animation: ZoomOutRight 1s ease;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+.line li > .btn-send:hover i.checked{
+    opacity: 1;
+    animation: rubberBand 2s ease;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    top: 30%;
+    left: 20%;
+    transform: translate(-15%,-50%); 
+}
+.line li > .btn-send:hover span.sent-s{
+    top: 50%;
+    left: 40%;
+    transform: translate(-40%,-50%);
+}
+.line li > .btn-send:hover span.sent-e{
+    top: 50%;
+    left: 47%;
+    transform: translate(-40%,-50%);
+}
+.line li > .btn-send:hover span.sent-n{
+    top: 50%;
+    left: 54%;
+    transform: translate(-40%,-50%);
+}
+.line li > .btn-send:hover span.sent-t{
+    top: 50%;
+    left: 60%;
+    transform: translate(-40%,-50%);
+}
+.line li > .btn-send:not(:hover) span.sent-s,
+.line li > .btn-send:not(:hover) span.sent-e,
+.line li > .btn-send:not(:hover) span.sent-n,
+.line li > .btn-send:not(:hover) span.sent-t{
+    visibility: hidden;
+}
 /*-----------------------------------------| button Get Started |---------------------------------------------*/
 .line li > .btn-get-started{
     position: relative;
@@ -405,6 +524,18 @@ h1{
 }
 
 
+
+@keyframes ZoomOutRight{
+    40%{
+        opacity: 1;
+        transform: scale3d(0.475,0.475,0.475) translate3d(-42px , 0 ,0);
+    }
+    100%{
+        opacity: 0;
+        transform: scale3d(0,10,20) translate3d(2000px , 0 ,0);
+        transform-origin: top top;
+    }
+}
 
 
 
