@@ -16,7 +16,7 @@ ul{
     padding: 0 15px;
     margin: 0 0;
 }
-/* .my-github{
+.my-github{
     width: 0px;
     height: 0px;
     border: 80px solid transparent;
@@ -33,7 +33,7 @@ ul{
     position:fixed;
     top: 20px;
     left: 20px;
-} */
+}
 h1,.subtitle{
     margin: 10px auto;
     color: white;
