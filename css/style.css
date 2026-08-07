@@ -16,6 +16,24 @@ ul{
     padding: 0 15px;
     margin: 0 0;
 }
+/* .my-github{
+    width: 0px;
+    height: 0px;
+    border: 80px solid transparent;
+    border-top-color: black;
+    border-left-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+.my-github >.my-github-link > i{
+    color: white;
+    font-size: 50px;
+    position:fixed;
+    top: 20px;
+    left: 20px;
+} */
 h1,.subtitle{
     margin: 10px auto;
     color: white;
@@ -255,15 +273,74 @@ h1{
 .line li > .btn-next:hover span i{
     opacity: 1;
 }
+/*-----------------------------------------| button Explore |---------------------------------------------*/
+.line li > .btn-explore{
+    position: relative;
+    width: 160px;
+    height: 58px;
+    border: none;
+    border-radius: 50px;
+    background-color: #0f0f0f; 
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    overflow: hidden;
+    transition: 0.35s;
+}
+.line li > .btn-explore span{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform:translate(-50% , -50%)
+}
+.line li > .btn-explore span i{
+    font-size: 15px;
+    color: white;
+    position: absolute;
+    top: 200%;
+    left:-115%;
+    transition: 0.2s;
+    z-index: 50;
+} 
+.line li > .btn-explore::before{
+    content: '';
+    width: 23px;
+    height: 23px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    left: 12%;
+}
+.line li > .btn-explore > i{
+    font-size: 15px;
+    color: #0f0f0f;
+    position: absolute;
+    top: 40%;
+    left: 14%;
+    transition: 0.2s;
+    z-index: 2;
+}
 
-
-
-
-
-
-
-
-
+.line li > .btn-explore:hover{
+    background-color: #00d0ff;
+}
+/* .line li > .btn-explore:hover::before{
+    z-index: 0;
+} */
+.line li > .btn-explore:hover span i{
+    opacity: 1;
+    top: 20%;
+    left: -61%;
+    z-index: 5;
+}
+.line li > .btn-explore:hover i{
+    opacity: 0;
+    color: #00d0ff;
+    top: -100%;
+    left: 65%;
+}
 
 
 
