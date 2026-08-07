@@ -20,8 +20,8 @@ ul{
     width: 0px;
     height: 0px;
     border: 80px solid transparent;
-    border-top-color: black;
-    border-left-color: black;
+    border-top-color: #0f0f0f;
+    border-left-color: #0f0f0f;
     position: fixed;
     top: 0;
     left: 0;
@@ -326,9 +326,6 @@ h1{
 .line li > .btn-explore:hover{
     background-color: #00d0ff;
 }
-/* .line li > .btn-explore:hover::before{
-    z-index: 0;
-} */
 .line li > .btn-explore:hover span i{
     opacity: 1;
     top: 20%;
@@ -341,7 +338,96 @@ h1{
     top: -100%;
     left: 65%;
 }
+/*-----------------------------------------| button Download |---------------------------------------------*/
+.line li > .btn-download{
+    position: relative;
+    width: 160px;
+    height: 58px;
+    border: none;
+    border-radius: 50px;
+    background-color: #0f0f0f; 
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    overflow: hidden;
+    transition: 0.35s;
+}
+.line li > .btn-download > i{
+    font-size: 35px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50% , 50%);
+    opacity: 0;
+    transition: 0.2s ease-in;
+}
+.line li > .btn-download span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    transition: 0.2s ease-out;
+}
+.line li > .btn-download:hover{
+    background-color: #00d0ff;
+}
+.line li > .btn-download:hover span{
+    top: -80%;
+    left: 50%;
+    transform: translate(-50% , 0%);
+    opacity: 0;
+}
+.line li > .btn-download:hover i{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    opacity: 1;
+}
+/*-----------------------------------------| button Send |---------------------------------------------*/
+
+/*-----------------------------------------| button Get Started |---------------------------------------------*/
+.line li > .btn-get-started{
+    position: relative;
+    width: 160px;
+    height: 58px;
+    border: none;
+    border-radius: 50px;
+    background-color: #00d0ff; 
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    overflow: hidden;
+    transition: 0.35s;
+}
+.line li > .btn-get-started:hover{
+    animation: rubberBand 1s ease;
+    transform-origin: center;
+}
 
 
 
 
+
+@keyframes rubberBand{
+    0%{
+        transform: scale3d(1,1,1);
+    }
+    30%{
+        transform: scale3d(1.25,0.75,1);
+    }
+    40%{
+        transform: scale3d(0.75 , 1.25,1);
+    }
+    50%{
+        transform: scale3d(1.15,0.85,1);
+    }
+    65%{
+        transform: scale3d(0.95,1.05,1);
+    }
+    75%{
+        transform: scale3d(1.05 , 0.95, 1);
+    }
+    100%{
+        transform: scale3d(1,1,1);
+    }
+}

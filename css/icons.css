@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-download1:before {
+  content: "\e96f";
+}
 .icon-heart-outline:before {
   content: "\e900";
 }
