@@ -1,3 +1,46 @@
+/* ------------------------------------------| Variables |------------------------------------------------ */
+:root{
+    /*----------| Primary Color |----------*/
+    --md-primary: #0f0f0f;
+    --md-primary-variant: #111827;
+    --md-on-primary: #ffffff;
+    /*--------| Secondary Color (Accent) |--------*/
+    --md-secondary: #ffffff;
+    --md-secondary-variant: #000000;
+    --md-on-secondary: #ffffff;
+    /*---------| Completely Color |---------*/
+    --md-completely:#00d0ff;
+    --md-completely-variant:#00b0d8; 
+    /*------| Background & Surface |-------*/
+    --md-background: #161c28;
+    --md-surface:#1d2432;
+    --md-on-background: #ffffff;
+    --md-on-surface:#ffffff;
+    /*------------| Extra |------------ */
+    --border-color-1:#d4d4d4;
+    --border-color-2:#2563eb59;
+    --md-shadow:  rgba(37, 99, 235, 0.35);
+    /*-------------| Typography Scale |---------------*/
+    --font-h1: 40px;
+    --font-h1-second:36px;
+    --font-h1-threeth: 96px;
+    --font-subtitle-1: 18px;
+    --font-subtitle-2: 16px;
+    --font-subtitle-3: 14px;
+    --font-button-1: 16px;
+    --font-button-2: 14px;
+    --font-caption-1: 14px;
+    --font-caption-2:12px;
+    --font-title-icon-big: 45px;
+    --font-title-icon-mediom: 40px;
+    --font-title-icon-small: 35px;
+    --font-icon-1:15px;
+    --font-icon-2:25px;
+    --font-icon-3:35px;
+}
+
+
+/* ---------------------------------------------| Tags |-------------------------------------------------- */
 *,
 *::after,
 *::before{
@@ -6,7 +49,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #161c28;
+    background-color: var(--md-background);
 }
 ul{
     list-style: none;
@@ -19,24 +62,24 @@ ul{
 .my-github{
     width: 0px;
     height: 0px;
-    border: 80px solid transparent;
-    border-top-color: #0f0f0f;
-    border-left-color: #0f0f0f;
+    border: 75px solid transparent;
+    border-top-color: var(--md-primary);
+    border-left-color: var(--md-primary);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 50;
 }
 .my-github >.my-github-link > i{
-    color: white;
-    font-size: 50px;
+    color: var(--md-on-primary);
+    font-size: var(--font-title-icon-big);
     position:fixed;
     top: 20px;
     left: 20px;
 }
 h1,.subtitle{
     margin: 10px auto;
-    color: white;
+    color: var(--md-on-secondary);
     text-align: center;
     font-family: sans-serif;
     font-weight: 10;
@@ -44,12 +87,12 @@ h1,.subtitle{
 }
 .subtitle{
     padding: 150px 10px 0px 10px;
-    font-size: 18px;
+    font-size: var(--font-subtitle-1);
     letter-spacing: 3px;
 }
 h1{
     padding:0px 10px 15px 10px;
-    font-size: 40px;
+    font-size: var(--font-h1);
     letter-spacing: 2px;
 }
 .line{
@@ -69,11 +112,11 @@ h1{
     position: relative;
     width: 160px;
     height: 58px;
-    border: 1px solid white;
+    border: 1px solid var(--border-color-1);
     border-radius: 50px;
-    background-color: #0f0f0f; 
-    color: white;
-    font-size: 16px;
+    background-color: var(--md-primary); 
+    color: var(--md-on-primary);
+    font-size: var(--font-button-1);
     font-weight: bolder;
     text-transform: uppercase;
     overflow: hidden;
@@ -124,10 +167,10 @@ h1{
     padding: 20px 50px;
     width: 100%;
     height: 100%;
-    border: 1px solid white;
+    border: 1px solid var(--md-on-primary);
     border-radius: 50px;
-    background-color: white;
-    color: #0f0f0f;
+    background-color: var(--md-on-secondary);
+    color: var(--md-primary);
     text-transform: uppercase;
     position: absolute;
     top: 0;
@@ -178,9 +221,9 @@ h1{
     height: 58px;
     border: none;
     border-radius: 50px;
-    background-color: #0f0f0f; 
-    color: white;
-    font-size: 16px;
+    background-color: var(--md-primary); 
+    color: var(--md-on-primary);
+    font-size: var(--font-button-1);
     font-weight: bolder;
     overflow: hidden;
     transition: 0.5s;
@@ -195,7 +238,7 @@ h1{
     left: 0;
     width: 100%;
     height: 100%;
-    background: white;
+    background: var(--md-secondary);
     transform: rotateY(90deg) skew(80deg);
     transition: 0.5s ease;
 }
@@ -203,7 +246,7 @@ h1{
     transform: rotateY(180deg) skew(-5deg);
 }
 .line li > .btn-login:hover > span{
-    color: #0f0f0f;
+    color: var(--md-primary);
     z-index: 2;
 }
 /*-----------------------------------------| button Submit |---------------------------------------------*/
@@ -211,11 +254,11 @@ h1{
     position: relative;
     width: 160px;
     height: 58px;
-    border:2px solid #2563eb59;
+    border:2px solid var(--border-color-2);
     border-radius: 50px;
-    background-color: #111827; 
-    color: white;
-    font-size: 18px;
+    background-color: var(--md-primary-variant); 
+    color: var(--md-on-primary);
+    font-size: var(--font-button-1);
     font-weight: 600;
     overflow: hidden;
     transition: 0.35s;
@@ -225,9 +268,9 @@ h1{
     z-index: 2;
 }
 .line li > .btn-submit:hover{
-    background-color: #0f0f0f;
+    background-color: var(--md-primary);
     transform: translateY(-4px);
-    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.35);
+    box-shadow: 0 15px 35px var(--md-shadow);
 }
 /*-----------------------------------------| button Next |---------------------------------------------*/
 .line li > .btn-next{
@@ -236,9 +279,9 @@ h1{
     height: 58px;
     border: none;
     border-radius: 50px;
-    background-color: #0f0f0f; 
-    color: white;
-    font-size: 18px;
+    background-color: var(--md-primary); 
+    color: var(--md-on-primary);
+    font-size: var(--font-button-1);
     font-weight: 600;
     overflow: hidden;
     transition: 0.35s;
@@ -248,7 +291,7 @@ h1{
     z-index: 2;
 }
 .line li > .btn-next  span i{
-    font-size: 21px;
+    font-size: var(--font-icon-2);
     opacity: 0;
     transition: 0.5s;
 }
@@ -260,7 +303,7 @@ h1{
     left: -100%;
     width: 100%;
     height: 100%;
-    background: #00d0ff;
+    background: var(--md-completely);
     transition: 0.45s ease;
 }
 .line li > .btn-next:hover::before{
@@ -268,7 +311,7 @@ h1{
 }
 .line li > .btn-next:hover{
     transform: translateY(-4px);
-    box-shadow: 0 15px 35px #2563eb59;
+    box-shadow: 0 15px 35px var(--md-shadow);
 }
 .line li > .btn-next:hover span i{
     opacity: 1;
@@ -280,9 +323,9 @@ h1{
     height: 58px;
     border: none;
     border-radius: 50px;
-    background-color: #0f0f0f; 
-    color: white;
-    font-size: 18px;
+    background-color: var(--md-primary); 
+    color: var(--md-on-primary);
+    font-size: var(--font-button-1);
     font-weight: 600;
     overflow: hidden;
     transition: 0.35s;
@@ -295,11 +338,11 @@ h1{
     transform:translate(-50% , -50%)
 }
 .line li > .btn-explore span i{
-    font-size: 15px;
-    color: white;
+    font-size: var(--font-icon-1);
+    color: var(--md-on-secondary);
     position: absolute;
     top: 200%;
-    left:-115%;
+    left:-127%;
     transition: 0.2s;
     z-index: 50;
 } 
@@ -307,15 +350,15 @@ h1{
     content: '';
     width: 23px;
     height: 23px;
-    background-color: white;
+    background-color: var(--md-secondary);
     border-radius: 50%;
     position: absolute;
     top: 30%;
     left: 12%;
 }
 .line li > .btn-explore > i{
-    font-size: 15px;
-    color: #0f0f0f;
+    font-size: var(--font-icon-1);
+    color: var(--md-primary);
     position: absolute;
     top: 40%;
     left: 14%;
@@ -324,17 +367,17 @@ h1{
 }
 
 .line li > .btn-explore:hover{
-    background-color: #00d0ff;
+    background-color: var(--md-completely);
 }
 .line li > .btn-explore:hover span i{
     opacity: 1;
-    top: 20%;
-    left: -61%;
+    top: 13%;
+    left: -75%;
     z-index: 5;
 }
 .line li > .btn-explore:hover i{
     opacity: 0;
-    color: #00d0ff;
+    color: var(--md-completely);
     top: -100%;
     left: 65%;
 }
@@ -345,15 +388,15 @@ h1{
     height: 58px;
     border: none;
     border-radius: 50px;
-    background-color: #0f0f0f; 
-    color: white;
-    font-size: 18px;
+    background-color: var(--md-primary); 
+    color: var(--md-on-primary);
+    font-size: var(--font-button-1);
     font-weight: 600;
     overflow: hidden;
     transition: 0.35s;
 }
 .line li > .btn-download > i{
-    font-size: 35px;
+    font-size: var(--font-icon-3);
     position: absolute;
     top: 100%;
     left: 50%;
@@ -369,7 +412,7 @@ h1{
     transition: 0.2s ease-out;
 }
 .line li > .btn-download:hover{
-    background-color: #00d0ff;
+    background-color: var(--md-completely);
 }
 .line li > .btn-download:hover span{
     top: -80%;
@@ -390,11 +433,11 @@ h1{
     height: 58px;
     border: none;
     border-radius: 50px;
-    background-color: white; 
-    color: #0f0f0f;
-    font-size: 18px;
+    background-color: var(--md-secondary); 
+    color: var(--md-primary);
+    font-size: var(--font-button-1);
     font-weight: 600;
-    /* overflow: hidden; */
+    overflow: hidden;
     transition: 0.35s;
 }
 .line li > .btn-send > i.letter{
@@ -411,7 +454,7 @@ h1{
     top: 50%;
     left: 20%;
     transform: translate(-15%,-50%);
-    font-size: 25px;
+    font-size: var(--font-icon-2);
     font-weight: 100;
     opacity: 0;
     transition-delay: 1.5s;
@@ -511,9 +554,9 @@ h1{
     height: 58px;
     border: none;
     border-radius: 50px;
-    background-color: #00d0ff; 
-    color: white;
-    font-size: 18px;
+    background-color: var(--md-completely); 
+    color: var(--md-on-primary);
+    font-size: var(--font-button-1);
     font-weight: 600;
     overflow: hidden;
     transition: 0.35s;
