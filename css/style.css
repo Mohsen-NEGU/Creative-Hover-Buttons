@@ -55,7 +55,7 @@ ul{
     list-style: none;
 }
 .container{
-    max-width: 1600px;
+    max-width: 1500px;
     padding: 0 15px;
     margin: 0 0;
 }
@@ -106,6 +106,21 @@ h1{
 }
 .line li button{
     margin: 15px 25px;
+}
+.caption{
+    padding: 5px 10px 20px 10px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: var(--font-caption-1);
+    color: var(--md-on-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.caption i{
+    padding: 10px 0px 10px 10px;
+    font-size: var(--font-icon-2);
+    color: var(--md-completely);
 }
 /*-----------------------------------------| button Signup |---------------------------------------------*/
 .line li > .btn-signup{
