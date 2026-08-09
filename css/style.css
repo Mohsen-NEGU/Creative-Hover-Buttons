@@ -96,9 +96,9 @@ h1{
     letter-spacing: 2px;
 }
 .line{
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 .line li{
@@ -507,7 +507,7 @@ h1{
     transform: translate(-40%,0%);
 }
 .line li > .btn-send span.send{
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
     top: 50%;
     left: 60%;
@@ -564,7 +564,7 @@ h1{
 }
 /*-----------------------------------------| button Get Started |---------------------------------------------*/
 .line li > .btn-get-started{
-    position: absolute;
+    position: relative;
     width: 160px;
     height: 58px;
     border: none;
@@ -579,6 +579,7 @@ h1{
 .line li > .btn-get-started:hover{
     animation: rubberBand 1s ease;
     transform-origin: center;
+    background-color: var(--md-completely-variant);
 }
 
 
@@ -594,8 +595,6 @@ h1{
         transform-origin: top top;
     }
 }
-
-
 
 @keyframes rubberBand{
     0%{
@@ -620,3 +619,66 @@ h1{
         transform: scale3d(1,1,1);
     }
 }
+
+
+/*-----------------------------------------| Responsive mobile 375px to 426px  |---------------------------------------------*/
+@media (min-width: 375px) and (max-width: 426px){
+    .my-github{
+    width: 0px;
+    height: 0px;
+    border: 60px solid transparent;
+    border-top-color: var(--md-primary);
+    border-left-color: var(--md-primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    }
+    .my-github >.my-github-link > i{
+    color: var(--md-on-primary);
+    font-size: var(--font-title-icon-mediom);
+    position:fixed;
+    top: 20px;
+    left: 20px;
+    }
+    h1,.subtitle{
+    margin: 10px auto;
+    color: var(--md-on-secondary);
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 10;
+    text-transform: uppercase;
+    }
+    .subtitle{
+    padding: 150px 10px 0px 10px;
+    font-size: var(--font-subtitle-2);
+    letter-spacing: 3px;
+    }
+    h1{
+    padding:0px 10px 15px 10px;
+    font-size: var(--font-h1-second);
+    letter-spacing: 2px;
+    }
+    .line{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    }
+    .line li{
+    position: relative;
+    display: grid;
+    justify-content: center;
+    }
+    .line li button{
+    margin: 15px 25px;
+    }
+/*------------| button Signup |-------------*/
+    .line li > .btn-signup{
+        transform: translate(0, 0px);
+    }
+}
+/*-----------------------------------------| Responsive mobile 0px to 375px |---------------------------------------------*/
+/* @media (min-width: 0px) and (max-width: 375px){
+
+} */
